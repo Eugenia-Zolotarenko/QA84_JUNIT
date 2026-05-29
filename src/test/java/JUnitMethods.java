@@ -30,6 +30,14 @@ public class JUnitMethods {
         res = MethodsForTest.parsAndSum("-2147483648", "2147483647");  //the min and max integer value
         assertEquals(-1, res);
 
+        res = MethodsForTest.parsAndSum("2147483647", "2147483647");  // two max integer value
+        assertEquals(-2, res);
+
+        res = MethodsForTest.parsAndSum("7624 ", "766");  //the min and max integer value
+        assertEquals(8390, res);
+
+        res = MethodsForTest.parsAndSum("767", " -678");  //the min and max integer value
+        assertEquals(89, res);
         //negative tests
 
         res = MethodsForTest.parsAndSum(" ", "45");
@@ -39,10 +47,13 @@ public class JUnitMethods {
         assertEquals(301707, res);
 
         assertThrows(NumberFormatException.class,
-                ()->{MethodsForTest.parsAndSum("7624 ", "766");}); //space at the end
+                ()->{MethodsForTest.parsAndSum("2147483648", "2147483647");}); //grater than max value
 
         assertThrows(NumberFormatException.class,
-                ()->{MethodsForTest.parsAndSum("767", " 678");}); //space at the start
+                ()->{MethodsForTest.parsAndSum("8", "21434645737384384686487483647");});
+
+        assertThrows(NumberFormatException.class,
+                ()->{MethodsForTest.parsAndSum("8", "-2147483649");}); //less than min value
 
         assertThrows(NumberFormatException.class,
                 ()->{MethodsForTest.parsAndSum("hello","45");});

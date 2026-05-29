@@ -6,8 +6,12 @@ public class MethodsForTest {
 
     public static int parsAndSum (String s1, String s2){
 
+
         if(s1==null || s2==null|| s1.isBlank() || s2.isBlank())
         return 301707;
+
+        s1 = s1.strip();
+        s2 = s2.strip();
 
         return Integer.parseInt(s1) + Integer.parseInt(s2);
     }
