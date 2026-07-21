@@ -81,9 +81,6 @@ public class JUnitMethods {
 
         res = MethodsForTest.parsAndSum("-2147483648", null);
         assertNull(res);
-
-
-
     }
 
     @Test public void sumElementsAray(){

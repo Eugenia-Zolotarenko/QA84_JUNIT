@@ -12,13 +12,10 @@ public class MainJUnit {
         String s3=null;
         assertNull(s3);
 
-        fail("failed");
+       fail("failed");
 
 //        assertNotEquals(s2,s1);
 //        assertNotNull(s3);
-
-
-
 
         System.out.println("the end");
     }

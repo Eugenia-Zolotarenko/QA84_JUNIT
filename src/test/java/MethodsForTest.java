@@ -37,8 +37,6 @@ public class MethodsForTest {
             return null;
 
         return array[indexFirst] + array[indexSecond];
-
-
     }
 
     /*
