@@ -36,5 +36,4 @@ public class JUnitMethodParameterizedTest {
         Integer actualResult = MethodsForTest.parsAndSum(s1, s2);
         assertNull(actualResult);
     }
-
 }
